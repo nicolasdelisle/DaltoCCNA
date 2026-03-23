@@ -1,1 +1,27 @@
+/create Vlan inside switch 2/
+Switch>
+Switch>en 
+Switch#conf t
+Switch(config)#vlan 10
+Switch(config-vlan)#exit
+Switch(config)#vlan 20
+Switch(config-vlan)#
 
+/configure port to pc2/
+
+Switch#conf t
+Switch(config)#interface fa0/2
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#
+
+/trunk port to switch 1/
+
+Switch#conf t
+Switch(config)#interface fa0/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#switchport trunk allowed vlan 10,20
+
+/saving config/
+
+Switch#write memory
