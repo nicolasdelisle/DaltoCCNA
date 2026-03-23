@@ -11,11 +11,7 @@ Switch(config-vlan)#
 
 Switch#conf t
 Switch(config)#interface fa0/3
-Switch(config-if)#swi
-Switch(config-if)#switchport mode acc
 Switch(config-if)#switchport mode access 
-Switch(config-if)#swi
-Switch(config-if)#switchport acc
 Switch(config-if)#switchport access vlan 10
 Switch(config-if)#
 
@@ -25,8 +21,6 @@ Switch#conf t
 Switch(config)#interface fa0/2
 Switch(config-if)#switchport mode trunk
 Switch(config-if)#switchport trunk allowed vlan 10,20
-Switch#conf t
-Switch(config-if)#
 
 /trunk port to router 1/
 
