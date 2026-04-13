@@ -1,3 +1,31 @@
-/router trunk port/ 
-work in progress
+Router>enable
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface g0/0
+Router(config-if)#no shut
 
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+interface g0/0.10
+Router(config-subif)#
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0.10, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.10, changed state to up
+encapsulation dot1Q 10
+Router(config-subif)#ip address 192.168.1.1 255.255.255.128
+Router(config-subif)#exit
+Router(config)#interface g0/0.20
+Router(config-subif)#
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0.20, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.20, changed state to up
+encapsulation dot1Q 20
+Router(config-subif)#ip address 192.168.1.129 255.255.255.128
+Router(config-subif)#exit
+Router(config)#end
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#write memory
