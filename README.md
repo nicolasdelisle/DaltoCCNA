@@ -1,5 +1,5 @@
-# DaltoCCNA - VLAN & Inter-VLAN Routing Lab
-
+# DaltoCCNA - issue during lab
+VLAN & Inter-VLAN Routing Lab / 01-basic office
 ## Overview
 This lab focuses on configuring VLANs, trunking between switches, and inter-VLAN routing using a router-on-a-stick setup.
 
